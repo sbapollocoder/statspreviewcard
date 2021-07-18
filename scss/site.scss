@@ -1,0 +1,82 @@
+$very-dark-blue: hsl(233,47%,7%);
+$dark-blue: hsl(244,38%,16%);
+$soft-violet: hsl(277,64%,61%);
+$white: hsl(0,0%,100%);
+$white-trans1: hsla(0,0%,100%,0.75);
+$white-trans2: hsla(0,0%,100%,0.6);
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: $very-dark-blue;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
+  opacity: 0.4;
+  filter: brightness(90%) contrast(200%);
+
+}
+
+h1 {
+  color: $white;
+  padding: 2rem 1.3rem;
+}
+
+.image-content {
+  background-color: $soft-violet;
+}
+
+.text-content {
+
+}
+
+.stats-content {
+  color: $white-trans1;
+}
+
+ul {
+  list-style: none;
+  padding-bottom: 2rem;
+}
+
+li {
+  padding-top: 2rem;
+  color: $white-trans1;
+}
+
+.list-caps {
+  text-transform: uppercase;
+  color: $white-trans2;
+  display: block;
+  padding-top: 0.4rem;
+}
+
+.mainpara {
+  color: $white-trans2;
+  line-height: 1.6rem;
+  padding: 0 1.3rem;
+}
+
+.accent {
+  color: $soft-violet;
+}
+
+.flex-container {
+  background-color: $dark-blue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  overflow: hidden;
+  text-align: center;
+}
