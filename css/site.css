@@ -108,14 +108,18 @@ body {
     padding-top: 1.3rem;
   }
   .flex-container .inner-container .text-content .stats-content {
-    display: flex;
-    flex-direction: row;
     height: 20vh;
-    align-items: flex-end;
     padding-bottom: 2rem;
   }
+  .flex-container .inner-container .text-content .stats-content ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 150px;
+    width: 100%;
+  }
   .flex-container .inner-container .text-content .stats-content li {
-    display: inline-block;
     font-size: 1.4rem;
     letter-spacing: 0.05rem;
     text-align: left;
@@ -132,6 +136,23 @@ body {
 @media screen and (min-width: 700px) and (min-width: 700px) and (max-width: 1020px) {
   .flex-container .inner-container .text-content {
     padding: 10px;
+  }
+  .flex-container .inner-container .text-content .stats-content {
+    display: block;
+    padding-top: 1rem;
+  }
+  .flex-container .inner-container .text-content .stats-content ul {
+    justify-content: space-around;
+  }
+  .flex-container .inner-container .text-content .stats-content li {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+  }
+  .flex-container .inner-container .text-content .stats-content .stats-name {
+    padding-top: 0.3rem;
   }
   .flex-container .image-content {
     width: 50vw;

@@ -145,19 +145,23 @@ body {
           padding-top: 1.3rem;
         }
     
-        .stats-content {
-          display: flex;
-          flex-direction: row;
-          
+        .stats-content {          
           height: 20vh;
-          align-items: flex-end;
           padding-bottom: 2rem;
+          
+          ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 150px;
+            width: 100%;
+          }
         
           li {
-            display: inline-block;
             font-size: 1.4rem;
             letter-spacing: 0.05rem;     
-            text-align: left; 
+            text-align: left;
           }
         }
       }
@@ -180,6 +184,27 @@ body {
       .inner-container {
         .text-content {
           padding: 10px;
+
+          .stats-content {
+            display: block;
+            padding-top: 1rem;
+
+            ul {
+              justify-content: space-around;
+            }
+   
+            li {
+              display: block;
+              font-size: 1.4rem;
+              letter-spacing: 0.05rem;     
+              text-align: center;
+              padding-bottom: 1.5rem;
+            }
+      
+            .stats-name {
+              padding-top: 0.3rem;
+            }
+          }
         }
       }
 
