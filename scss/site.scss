@@ -17,73 +17,102 @@ body {
 	font-family: 'Inter', sans-serif;
 }
 
-// Mobile Design
-@media screen and (max-width: 700px) {
-	.flex-container {
+.flex-container {
+  .inner-container {
+    background-color: $dark-blue;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5.4rem 1.4rem;
 
-		.inner-container {
-			background-color: $dark-blue;
-			border-radius: 10px;
-			overflow: hidden;
-			text-align: center;
-			margin: 5.4rem 1.4rem;
+    .image-content {
+      font-size:0;
+      background-color: $soft-violet;
 
-      .image-content {
-        background-size: contain;
-        font-size: 0px;
-        background-color: $soft-violet;
-
-        img {
-          max-width: 100%;
-          opacity: 0.7;
-          mix-blend-mode:hard-light;
-        }
+      img {
+        opacity: 0.7;
+        mix-blend-mode:hard-light;
       }
     }
 
-		.text-content {
-			font-weight: normal;
-			padding: 2.5rem 1.3rem;
+    .text-content {
+      h1 {
+        color: $white;
+      }
 
-			h1 {
-				color: $white;
-				line-height: 2rem;
-			}
+      .accent {
+        color: $soft-violet;
+      }
 
-			.accent {
-				color: $soft-violet;
-			}
+      .mainpara {
+        color: $white-trans2;
+      }
 
-			.mainpara {
-				color: $white-trans2;
-				line-height: 1.5rem;
-				padding: 1rem;
-			}
+      .stats-content {
+        ul {
+          list-style: none;
 
-			.stats-content {
-        list-style: none;
-        padding-top: 1rem;
-
-        li {
-          font-weight: bold;
-          color: $white;
-          font-size: 1.4rem;
-          letter-spacing: 0.05rem;     
-          text-align: center;
-          padding-bottom: 1.5rem;
+          li {
+            font-weight: bold;
+            color: $white;
+          }
         }
-  
+
         .stats-name {
           color: $white-trans2;
           text-transform: uppercase;
           display: block;
           font-size: 0.7rem;
           letter-spacing: 0.1rem;
-          padding-top: 0.3rem;
           font-weight: lighter;
         }
-			}
-		}
+      }
+    }
+  }
+}
+
+// Mobile Design
+@media screen and (max-width: 700px) {
+	.flex-container {
+
+		.inner-container {
+			text-align: center;
+
+      .image-content {
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      .text-content {
+        font-weight: normal;
+        padding: 2.5rem 1.3rem;
+  
+        h1 {
+          line-height: 2rem;
+        }
+   
+        .mainpara {
+          line-height: 1.5rem;
+          padding: 1rem;
+        }
+  
+        .stats-content {
+          padding-top: 1rem;
+  
+          li {
+            font-size: 1.4rem;
+            letter-spacing: 0.05rem;     
+            text-align: center;
+            padding-bottom: 1.5rem;
+          }
+    
+          .stats-name {
+            padding-top: 0.3rem;
+          }
+        }
+      }
+    }
 	}
 }
 
@@ -94,87 +123,69 @@ body {
 		height: 100vh;
 		justify-content: center;
     align-items: center;
-	}
 
-	.inner-container {
-		background-color: $dark-blue;
-		border-radius: 10px;
-		overflow: hidden;
-		text-align: left;
-		margin: 5.4rem 1.4rem;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		max-height: 446px;
-		max-width: 1110px;
-	}
-
-	.text-content {
-		order: 1;
-    padding: 14vh;
-
-    h1 {
-      color: $white;
-      line-height: 2.5rem;
-    }
-
-    .accent {
-      color: $soft-violet;
-    }
-
-    .mainpara {
-      color: $white-trans2;
-      line-height: 1.5rem;
-      padding-top: 1.3rem;
-    }
-
-    .stats-content {
+    .inner-container {
+      text-align: left;
       display: flex;
       flex-direction: row;
-      
-      height: 20vh;
-      align-items: flex-end;
-      background-color: red;
-      padding-bottom: 2rem;
+      justify-content: center;
+      max-height: 446px;
+      max-width: 1110px;
 
-      list-style: none;
-
-      ul {
+      .text-content {
+        order: 1;
+        padding: 60px;
+    
+        h1 {
+          line-height: 2.5rem;
+        }    
+    
+        .mainpara {
+          line-height: 1.5rem;
+          padding-top: 1.3rem;
+        }
+    
+        .stats-content {
+          display: flex;
+          flex-direction: row;
+          
+          height: 20vh;
+          align-items: flex-end;
+          padding-bottom: 2rem;
+        
+          li {
+            display: inline-block;
+            font-size: 1.4rem;
+            letter-spacing: 0.05rem;     
+            text-align: left; 
+          }
+        }
       }
-
-      li {
-        display: inline-block;
-        font-weight: bold;
-        color: $white;
-        font-size: 1.4rem;
-        letter-spacing: 0.05rem;     
-        text-align: left; 
-      }
-
-      .stats-name {
-        color: $white-trans2;
-        text-transform: uppercase;
-        display: block;
-        font-size: 0.7rem;
-        letter-spacing: 0.1rem;
-        font-weight: lighter;
+    
+      .image-content {
+        order: 2;
+    
+        img {
+          width: 540;
+          height: 446px;
+          display: block;    
+        }
       }
     }
+
 	}
 
-	.image-content {
-		order: 2;
-    font-size: 0px;
-    background-color: $soft-violet;
-    background-size: contain;
+  @media screen and (min-width: 700px) and (max-width: 1020px) {
+    .flex-container {
+      .inner-container {
+        .text-content {
+          padding: 10px;
+        }
+      }
 
-		img {
-			width: 540px;
-			height: 446px;
-      display: block;
-
-      opacity: 0.7;
-      mix-blend-mode:hard-light;
-		}
-	}
+      .image-content {
+        width: 50vw;
+      }
+    }
+  }
 }
