@@ -56,6 +56,7 @@ body {
   .flex-container .inner-container .image-content img {
     max-width: 100%;
     height: auto;
+    padding-right: 100px;
   }
   .flex-container .inner-container .text-content {
     font-weight: normal;
