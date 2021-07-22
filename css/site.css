@@ -7,66 +7,139 @@
 body {
   background-color: #090b1a;
   font-size: 15px;
-  font-family: "Lexend Deca", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-img {
-  max-width: 100%;
-  margin: auto;
-  opacity: 0.4;
-  filter: brightness(90%) contrast(200%);
+@media screen and (max-width: 700px) {
+  .flex-container .inner-container {
+    background-color: #1b1938;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    margin: 5.4rem 1.4rem;
+  }
+  .flex-container .inner-container .image-content {
+    background-size: contain;
+    font-size: 0px;
+    background-color: #aa5cdb;
+  }
+  .flex-container .inner-container .image-content img {
+    max-width: 100%;
+    opacity: 0.7;
+    mix-blend-mode: hard-light;
+  }
+  .flex-container .text-content {
+    font-weight: normal;
+    padding: 2.5rem 1.3rem;
+  }
+  .flex-container .text-content h1 {
+    color: white;
+    line-height: 2rem;
+  }
+  .flex-container .text-content .accent {
+    color: #aa5cdb;
+  }
+  .flex-container .text-content .mainpara {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5rem;
+    padding: 1rem;
+  }
+  .flex-container .text-content .stats-content {
+    list-style: none;
+    padding-top: 1rem;
+  }
+  .flex-container .text-content .stats-content li {
+    font-weight: bold;
+    color: white;
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+  }
+  .flex-container .text-content .stats-content .stats-name {
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    padding-top: 0.3rem;
+    font-weight: lighter;
+  }
 }
+@media screen and (min-width: 700px) {
+  .flex-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
 
-h1 {
-  color: white;
-  padding: 2rem 1.3rem;
-}
+  .inner-container {
+    background-color: #1b1938;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    margin: 5.4rem 1.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-height: 446px;
+    max-width: 1110px;
+  }
 
-.image-content {
-  background-color: #aa5cdb;
-}
+  .text-content {
+    order: 1;
+    padding: 5% 10%;
+  }
+  .text-content h1 {
+    color: white;
+    line-height: 3.1rem;
+  }
+  .text-content .accent {
+    color: #aa5cdb;
+  }
+  .text-content .mainpara {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5rem;
+    padding-top: 3.5rem;
+  }
+  .text-content .stats-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-top: 1.4rem;
+    list-style: none;
+  }
+  .text-content .stats-content li {
+    font-weight: bold;
+    color: white;
+    font-size: 1.4rem;
+    letter-spacing: 0.05rem;
+    text-align: left;
+  }
+  .text-content .stats-content .stats-name {
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+  }
 
-.stats-content {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-ul {
-  list-style: none;
-  padding-bottom: 2rem;
-}
-
-li {
-  padding-top: 2rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.list-caps {
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-  display: block;
-  padding-top: 0.4rem;
-}
-
-.mainpara {
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.6rem;
-  padding: 0 1.3rem;
-}
-
-.accent {
-  color: #aa5cdb;
-}
-
-.flex-container {
-  background-color: #1b1938;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  overflow: hidden;
-  text-align: center;
+  .image-content {
+    order: 2;
+    font-size: 0px;
+    background-color: #aa5cdb;
+    background-size: contain;
+  }
+  .image-content img {
+    width: 540px;
+    height: 446px;
+    display: block;
+    opacity: 0.7;
+    mix-blend-mode: hard-light;
+  }
 }
 
 /*# sourceMappingURL=site.css.map */

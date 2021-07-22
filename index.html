@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,23 +16,43 @@
 
   <title>Frontend Mentor | Stats preview card component</title>
 </head>
+
 <body>
+
+  <div class="image">
+    <figure class="figure"></figure>
+  </div>
   <div class="flex-container">
-    <div class="image-content">
-      <img src="images/image-header-mobile.jpg" alt="">
-    </div>
-    <div class="text-content">
-      <h1>Get <span class="accent">insights</span> that help your business grow.</h1>      
+    <div class="inner-container">
+      <div class="image-content">
+        <picture>
+          <source 
+            srcset="images/image-header-mobile.jpg"
+            media="(max-width: 700px)">
+          <source
+            srcset="images/image-header-desktop.jpg"
+            media="(min-width: 700px)">
+          <img
+            src="images/image-header-mobile.jpg"
+            alt=""
+          >
+        </picture>
+      </div>
+      <div class="text-content">
+        <h1>Get <span class="accent">insights</span> that help your business grow.</h1>
 
-      <p class="mainpara">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-      experience, and overall efficiency.</p>
+        <p class="mainpara">Discover the benefits of data analytics and make better decisions regarding revenue,
+          customer
+          experience, and overall efficiency.</p>
 
-      <ul class="stats-content">
-        <li>10k+ <span class="list-caps">companies</span></li>
-        <li>314 <span class="list-caps">templates</span></li>
-        <li>12m+ <span class="list-caps">queries</span></li>
-      </ul>
+        <ul class="stats-content">
+          <li>10k+ <span class="stats-name">companies<span></li>
+          <li>314 <span class="stats-name">templates</span></li>
+          <li>12M+ <span class="stats-name">queries</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
+
 </html>

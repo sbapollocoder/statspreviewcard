@@ -1,82 +1,174 @@
-$very-dark-blue: hsl(233,47%,7%);
-$dark-blue: hsl(244,38%,16%);
-$soft-violet: hsl(277,64%,61%);
-$white: hsl(0,0%,100%);
-$white-trans1: hsla(0,0%,100%,0.75);
-$white-trans2: hsla(0,0%,100%,0.6);
+$very-dark-blue: hsl(233, 47%, 7%);
+$dark-blue: hsl(244, 38%, 16%);
+$soft-violet: hsl(277, 64%, 61%);
+$white: hsl(0, 0%, 100%);
+$white-trans1: hsla(0, 0%, 100%, 0.75);
+$white-trans2: hsla(0, 0%, 100%, 0.6);
 
 * {
-  margin:0;
-  padding:0;
-  box-sizing: content-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
 }
 
 body {
-  background-color: $very-dark-blue;
-  font-size: 15px;
-  font-family: 'Lexend Deca', sans-serif;
+	background-color: $very-dark-blue;
+	font-size: 15px;
+	font-family: 'Inter', sans-serif;
 }
 
-img {
-  max-width: 100%;
-  margin: auto;
-  opacity: 0.4;
-  filter: brightness(90%) contrast(200%);
+// Mobile Design
+@media screen and (max-width: 700px) {
+	.flex-container {
 
+		.inner-container {
+			background-color: $dark-blue;
+			border-radius: 10px;
+			overflow: hidden;
+			text-align: center;
+			margin: 5.4rem 1.4rem;
+
+      .image-content {
+        background-size: contain;
+        font-size: 0px;
+        background-color: $soft-violet;
+
+        img {
+          max-width: 100%;
+          opacity: 0.7;
+          mix-blend-mode:hard-light;
+        }
+      }
+    }
+
+		.text-content {
+			font-weight: normal;
+			padding: 2.5rem 1.3rem;
+
+			h1 {
+				color: $white;
+				line-height: 2rem;
+			}
+
+			.accent {
+				color: $soft-violet;
+			}
+
+			.mainpara {
+				color: $white-trans2;
+				line-height: 1.5rem;
+				padding: 1rem;
+			}
+
+			.stats-content {
+        list-style: none;
+        padding-top: 1rem;
+
+        li {
+          font-weight: bold;
+          color: $white;
+          font-size: 1.4rem;
+          letter-spacing: 0.05rem;     
+          text-align: center;
+          padding-bottom: 1.5rem;
+        }
+  
+        .stats-name {
+          color: $white-trans2;
+          text-transform: uppercase;
+          display: block;
+          font-size: 0.7rem;
+          letter-spacing: 0.1rem;
+          padding-top: 0.3rem;
+          font-weight: lighter;
+        }
+			}
+		}
+	}
 }
 
-h1 {
-  color: $white;
-  padding: 2rem 1.3rem;
-}
+// Desktop design
+@media screen and (min-width: 700px) {
+	.flex-container {
+		display: flex;
+		height: 100vh;
+		justify-content: center;
+    align-items: center;
+	}
 
-.image-content {
-  background-color: $soft-violet;
-}
+	.inner-container {
+		background-color: $dark-blue;
+		border-radius: 10px;
+		overflow: hidden;
+		text-align: left;
+		margin: 5.4rem 1.4rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		max-height: 446px;
+		max-width: 1110px;
+	}
 
-.text-content {
+	.text-content {
+		order: 1;
+    padding: 5% 10%;
 
-}
+    h1 {
+      color: $white;
+      line-height: 3.1rem;
+    }
 
-.stats-content {
-  color: $white-trans1;
-}
+    .accent {
+      color: $soft-violet;
+    }
 
-ul {
-  list-style: none;
-  padding-bottom: 2rem;
-}
+    .mainpara {
+      color: $white-trans2;
+      line-height: 1.5rem;
+      padding-top: 3.5rem;
+    }
 
-li {
-  padding-top: 2rem;
-  color: $white-trans1;
-}
+    .stats-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items:flex-end;
+      padding-top: 1.4rem;
 
-.list-caps {
-  text-transform: uppercase;
-  color: $white-trans2;
-  display: block;
-  padding-top: 0.4rem;
-}
+      list-style: none;
 
-.mainpara {
-  color: $white-trans2;
-  line-height: 1.6rem;
-  padding: 0 1.3rem;
-}
+      li {
+        font-weight: bold;
+        color: $white;
+        font-size: 1.4rem;
+        letter-spacing: 0.05rem;     
+        text-align: left;   
+      }
 
-.accent {
-  color: $soft-violet;
-}
+      .stats-name {
+        color: $white-trans2;
+        text-transform: uppercase;
+        display: block;
+        font-size: 0.7rem;
+        letter-spacing: 0.1rem;
+        font-weight: lighter;
+      }
+    }
+	}
 
-.flex-container {
-  background-color: $dark-blue;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  overflow: hidden;
-  text-align: center;
+	.image-content {
+		order: 2;
+    font-size: 0px;
+    background-color: $soft-violet;
+    background-size: contain;
+
+		img {
+			width: 540px;
+			height: 446px;
+      display: block;
+
+      opacity: 0.7;
+      mix-blend-mode:hard-light;
+		}
+	}
 }
