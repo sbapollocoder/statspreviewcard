@@ -89,11 +89,11 @@ body {
 
   .text-content {
     order: 1;
-    padding: 5% 10%;
+    padding: 14vh;
   }
   .text-content h1 {
     color: white;
-    line-height: 3.1rem;
+    line-height: 2.5rem;
   }
   .text-content .accent {
     color: #aa5cdb;
@@ -101,17 +101,19 @@ body {
   .text-content .mainpara {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.5rem;
-    padding-top: 3.5rem;
+    padding-top: 1.3rem;
   }
   .text-content .stats-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    height: 20vh;
     align-items: flex-end;
-    padding-top: 1.4rem;
+    background-color: red;
+    padding-bottom: 2rem;
     list-style: none;
   }
   .text-content .stats-content li {
+    display: inline-block;
     font-weight: bold;
     color: white;
     font-size: 1.4rem;
