@@ -128,7 +128,7 @@ body {
     order: 2;
   }
   .flex-container .inner-container .image-content img {
-    width: 540;
+    width: 540px;
     height: 446px;
     display: block;
   }
