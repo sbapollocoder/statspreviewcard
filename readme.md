@@ -42,16 +42,19 @@ Users should be able to:
 - Used Sass via github.io and on local development machine with watch mode
 - Continued looking at media queries
 - Changing image colours
+- Responsive images
+- picture and srcset
 
 ### Continued development
 
-- Want to make it more responsive so that it more seamlessly breaks into the mobile site rather than being quite a harsh transition at a fixed coordinate
 
 ### Useful resources
 
 - (https://css-tricks.com/almanac/properties/b/background-blend-mode/) - Amending colour of graphics
 - (https://nekocalc.com/px-to-rem-converter) - Converting px to rem
 - (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images) - Background cover for sizing mobile images
+- https://voormedia.com/blog/2012/11/responsive-background-images-with-fixed-or-fluid-aspect-ratios/example-with-image
+
 
 ## Author
 
